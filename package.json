@@ -1,5 +1,9 @@
 {
   "name": "dashboard-personal-account",
+  "author": {
+    "name": "Alexei Ovsyannikov",
+    "email": "pink-doublethink@proton.me"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
