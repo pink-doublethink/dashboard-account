@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from 'next/navigation'
 import { MenuItem as MenuItemType } from "../../constants/menu-items";
 import { MenuItemContainer } from "./MenuItem.styles";
 import MenuItemsList from "../MenuItemsList";
@@ -17,7 +17,7 @@ export default function MenuItem({
 }: MenuItemProps) {
   const [isExpanded, toggleExpanded] = useState(false);
 
-  const router = useRouter();
+  const router = usePathname();
   const selected = router.asPath === url;
   const isNested = subItems && subItems?.length > 0;
 

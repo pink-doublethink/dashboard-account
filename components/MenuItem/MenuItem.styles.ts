@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuItemContainer = styled.a<{ depth: number }>`
+export const MenuItemContainer = styled.a`
   display: flex;
   flex-direction: row;
   font-size: 20px;
@@ -14,8 +14,6 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   }
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.main};
-    color: ${(props) => props.theme.colors.secondary};
     opacity: 0.5;
     cursor: pointer;
   }
@@ -24,11 +22,5 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: ${({ depth }) => `${depth}rem`};
-  }
-
-  &.selected {
-    background-color: ${(props) => props.theme.colors.main};
-    color: ${(props) => props.theme.colors.textLight};
   }
 `;
